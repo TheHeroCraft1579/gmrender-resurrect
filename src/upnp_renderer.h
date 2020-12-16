@@ -30,6 +30,9 @@ void upnp_renderer_dump_transport_scpd(void);
 
 // Returned pointer not owned.
 struct upnp_device_descriptor *upnp_renderer_descriptor(const char *name,
+							const char *manufacturer,
+							const char *model_name,
+							const char *model_description,
 							const char *uuid,
 							const char* mime_filter);
 

@@ -137,6 +137,9 @@ upnp_renderer_descriptor(const char *friendly_name,
 			 const char* mime_filter)
 {
 	render_device.friendly_name = friendly_name;
+	render_device.manufacturer = manufacturer;
+	render_device.model_name = model_name;
+	render_device.model_description = model_description;
 	render_device.mime_filter = mime_filter;
 
 	char *udn = NULL;

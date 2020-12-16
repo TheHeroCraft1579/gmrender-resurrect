@@ -83,6 +83,9 @@ static const gchar *uuid = GMRENDER_UUID;
 static const gchar *uuid = "GMediaRender-1_0-000-000-002";
 #endif
 static const gchar *friendly_name = PACKAGE_NAME;
+static const gchar *manufacturer = "WebRadio";
+static const gchar *model_name = "WebRadio";
+static const gchar *model_description = "";
 static const gchar *output = NULL;
 static const gchar *pid_file = NULL;
 static const gchar *log_file = NULL;
@@ -108,8 +111,8 @@ static GOptionEntry option_entries[] = {
 	  "Manufacturer name to advertise.", NULL },
 	{ "model_name", 'n', 0, G_OPTION_ARG_STRING, &model_name,
 	  "Model name to advertise.", NULL },
-	{ "model_description", 'd', 0, G_OPTION_ARG_STRING, &model_description,
-	  "Model description to advertise.", NULL ],
+	{ "model_description", 'i', 0, G_OPTION_ARG_STRING, &model_description,
+	  "Model description to advertise.", NULL },
 	{ "output", 'o', 0, G_OPTION_ARG_STRING, &output,
 	  "Output module to use.", NULL },
 	{ "pid-file", 'P', 0, G_OPTION_ARG_STRING, &pid_file,
