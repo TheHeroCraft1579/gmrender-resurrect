@@ -130,6 +130,9 @@ static int upnp_renderer_init(void)
 
 struct upnp_device_descriptor *
 upnp_renderer_descriptor(const char *friendly_name,
+			 const char *manufacturer,
+			 const char *model_name,
+			 const char *model_description, 
 			 const char *uuid,
 			 const char* mime_filter)
 {
