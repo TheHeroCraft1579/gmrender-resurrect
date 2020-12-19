@@ -83,9 +83,6 @@ static const gchar *uuid = GMRENDER_UUID;
 static const gchar *uuid = "GMediaRender-1_0-000-000-002";
 #endif
 static const gchar *friendly_name = PACKAGE_NAME;
-static const gchar *manufacturer = "WebRadio";
-static const gchar *model_name = "WebRadio";
-static const gchar *model_description = "";
 static const gchar *output = NULL;
 static const gchar *pid_file = NULL;
 static const gchar *log_file = NULL;
@@ -107,12 +104,6 @@ static GOptionEntry option_entries[] = {
 	  "UUID to advertise", NULL },
 	{ "friendly-name", 'f', 0, G_OPTION_ARG_STRING, &friendly_name,
 	  "Friendly name to advertise.", NULL },
-	{ "manufacturer", 'm', 0, G_OPTION_ARG_STRING, &manufacturer,
-	  "Manufacturer name to advertise.", NULL },
-	{ "model_name", 'n', 0, G_OPTION_ARG_STRING, &model_name,
-	  "Model name to advertise.", NULL },
-	{ "model_description", 'i', 0, G_OPTION_ARG_STRING, &model_description,
-	  "Model description to advertise.", NULL },
 	{ "output", 'o', 0, G_OPTION_ARG_STRING, &output,
 	  "Output module to use.", NULL },
 	{ "pid-file", 'P', 0, G_OPTION_ARG_STRING, &pid_file,
@@ -287,7 +278,7 @@ int main(int argc, char **argv)
 		fclose(pid_file_stream);
 	}
 
-	upnp_renderer = upnp_renderer_descriptor(friendly_name, manufacturer, model_name, model_description, uuid, mime_filter);
+	upnp_renderer = upnp_renderer_descriptor(friendly_name, uuid, mime_filter);
 	if (upnp_renderer == NULL) {
 		return EXIT_FAILURE;
 	}
